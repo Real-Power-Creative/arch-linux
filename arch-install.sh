@@ -22,9 +22,7 @@ chattr +i /etc/resolv.conf
 # -ADD NEW USER-
 useradd -m -G wheel -s /bin/bash real-power
 
-
 # -INSTALL & SET GRUB BOOTLOADER-
-
 pacman -S grub efibootmgr
 mkdir /boot/efi
 mount /dev/nvme0n1p1 /boot/efi
@@ -33,3 +31,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 #-CONSOLEFONT-
 echo "FONT=ter-d28b.psf.gz" >> /etc/vconsole.conf
+
+#-HOME FOLDER-
+pacman -S xdg-user-dirs
+xdg-user-dirs-update
