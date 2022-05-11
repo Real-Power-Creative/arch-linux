@@ -16,7 +16,8 @@ echo ::1		localhost >> /etc/hosts
 echo 127.0.1.1	real-arch.localdomain	real-arch >> /etc/hosts
 pacman -S networkmanager
 systemctl enable NetworkManager
-sed -i 
+sed -i 's/192.168.0.1/8.8.8.8/' /etc/resolv.conf
+chattr +i /etc/resolv.conf
 
 # -ADD NEW USER-
 useradd -m -G wheel -s /bin/bash real-power
