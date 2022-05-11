@@ -30,6 +30,7 @@ grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi
 grub-mkconfig -o /boot/grub/grub.cfg
 
 #-CONSOLEFONT-
+pacman -S terminus-font
 echo "FONT=ter-d28b.psf.gz" >> /etc/vconsole.conf
 
 #-HOME FOLDER-
