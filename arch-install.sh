@@ -36,3 +36,4 @@ echo "FONT=ter-d28b.psf.gz" >> /etc/vconsole.conf
 #-HOME FOLDER-
 pacman -S xdg-user-dirs
 xdg-user-dirs-update
+mkdir ~/.config
