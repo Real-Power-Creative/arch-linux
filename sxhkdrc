@@ -122,6 +122,27 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
+# brightness down
+
+XF86MonBrightnessDown
+
+	xbacklight -dec 10%
+
+# brightness up
+
+XF86MonBrightnessUp
+
+	xbacklight -inc 10%
+
+# Changing the Volume
+
+XF86Audio{Raise,Lower}Volume
+
+	amixer set Master 10%{+,-}
+
+XF86AudioMute
+
+	amixer set Master toggle
 
 # powermenu
 super + x
