@@ -22,6 +22,10 @@ chattr +i /etc/resolv.conf
 # -ADD NEW USER-
 useradd -m -G wheel -s /bin/bash real-power
 
+# -ADD USER TO SUDO PERMISSION-
+sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
+
+
 # -INSTALL & SET GRUB BOOTLOADER-
 pacman -S grub efibootmgr
 mkdir /boot/efi
