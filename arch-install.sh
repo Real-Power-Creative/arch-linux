@@ -41,3 +41,4 @@ echo "FONT=ter-d28b.psf.gz" >> /etc/vconsole.conf
 pacman -S xdg-user-dirs
 xdg-user-dirs-update
 mkdir ~/.config
+#hello
